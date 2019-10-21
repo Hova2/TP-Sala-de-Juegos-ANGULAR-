@@ -1,3 +1,4 @@
+import { MatToolbarModule, MatCardModule, MatButtonModule } from '@angular/material';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -65,6 +66,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     RuteandoModule,
     HttpClientModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     }),
