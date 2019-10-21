@@ -1,4 +1,5 @@
 import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -44,7 +45,6 @@ import { JuegoServiceService } from './servicios/juego-service.service';
 import { JugadoresService } from './servicios/jugadores.service';
 import { MiHttpService } from './servicios/mi-http/mi-http.service';
 import { PaisesService } from './servicios/paises.service';
-import { HttpModule } from '@angular/http';
 
 
 
@@ -80,7 +80,7 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     FormsModule,
     RuteandoModule,
-    HttpModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })

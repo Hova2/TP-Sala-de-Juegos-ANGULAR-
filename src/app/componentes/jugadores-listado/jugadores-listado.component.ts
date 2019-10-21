@@ -6,42 +6,36 @@ import { JugadoresService } from '../../servicios/jugadores.service';
   styleUrls: ['./jugadores-listado.component.css']
 })
 export class JugadoresListadoComponent implements OnInit {
+  listado: any;
+  miJugadoresServicio: JugadoresService;
 
-  listado:any
-  miJugadoresServicio:JugadoresService
-  
-    constructor(serviceJugadores:JugadoresService) {
-      this.miJugadoresServicio = serviceJugadores;
-      
-    }
-    
-
-
-  ngOnInit() {
+  constructor(serviceJugadores: JugadoresService) {
+    this.miJugadoresServicio = serviceJugadores;
   }
 
+  ngOnInit() {}
 
-  TraerTodos(){
+  TraerTodos() {
     //alert("totos");
-    this.miJugadoresServicio.traertodos('jugadores/','todos').then(data=>{
+    /*this.miJugadoresServicio.traertodos('jugadores/', 'todos').then(data => {
       //console.info("jugadores listado",(data));
-      this.listado= data;
-
-    })
+      this.listado = data;
+    });*/
   }
-  TraerGanadores(){
-    this.miJugadoresServicio.traertodos('jugadores/','ganadores').then(data=>{
-      //console.info("jugadores listado",(data));
-      this.listado= data;
-
-    })
+  TraerGanadores() {
+   /* this.miJugadoresServicio
+      .traertodos('jugadores/', 'ganadores')
+      .then(data => {
+        //console.info("jugadores listado",(data));
+        this.listado = data;
+      });*/
   }
-  TraerPerdedores(){
-    this.miJugadoresServicio.traertodos('jugadores/','perdedores').then(data=>{
-      //console.info("jugadores listado",(data));
-      this.listado= data;
-
-    })
+  TraerPerdedores() {
+   /* this.miJugadoresServicio
+      .traertodos('jugadores/', 'perdedores')
+      .then(data => {
+        //console.info("jugadores listado",(data));
+        this.listado = data;
+      });*/
   }
-
 }
