@@ -13,19 +13,6 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { ErrorComponent } from './componentes/error/error.component';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { JuegosComponent } from './componentes/juegos/juegos.component';
-// declaro donde quiero que se dirija
-/*
-const MiRuteo = [{path: 'error' , component: ErrorComponent},
-{path: 'Login' , component: LoginComponent},
-{path: 'Principal' , component: PrincipalComponent , pathMatch: 'full'},
-{path: 'Adivina' , component: AdivinaElNumeroComponent},
-{path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
-{path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
-{path: 'Agilidad' , component: AgilidadAritmeticaComponent},
-{path: '' , component: LoginComponent , pathMatch: 'full'},
-
-{path: '**' , component: ErrorComponent} ];
-*/
 import { JugadoresListadoComponent } from './componentes/jugadores-listado/jugadores-listado.component';
 import { ListadoDePaisesComponent } from './componentes/listado-de-paises/listado-de-paises.component';
 import { ListadoDeResultadosComponent } from './componentes/listado-de-resultados/listado-de-resultados.component';
@@ -46,10 +33,6 @@ import { JugadoresService } from './servicios/jugadores.service';
 import { MiHttpService } from './servicios/mi-http/mi-http.service';
 import { PaisesService } from './servicios/paises.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -86,11 +69,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     }),
     BrowserAnimationsModule
-    // NgbModule.forRoot(MiRuteo),
-    // importo el ruteo
-    // RouterModule.forRoot(MiRuteo)
   ],
-  providers: [ JuegoServiceService, MiHttpService,PaisesService,ArchivosJugadoresService,JugadoresService],
+  providers: [
+    JuegoServiceService,
+    MiHttpService,
+    PaisesService,
+    ArchivosJugadoresService,
+    JugadoresService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
