@@ -1,4 +1,4 @@
-import { MatToolbarModule, MatCardModule, MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatSpinner, MatIconModule, MatInput } from '@angular/material';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -59,6 +59,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MapaDeGoogleComponent,
     JugadoresListadoComponent,
     InputJugadoresComponent,
+    MatSpinner,
     SexoPipe
   ],
   imports: [
@@ -68,7 +69,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     MatToolbarModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatButtonModule,
+    MatIconModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     }),
