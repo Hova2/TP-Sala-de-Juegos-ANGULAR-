@@ -2,48 +2,28 @@
   <mat-card-header>
     <mat-card-title>Login</mat-card-title>
   </mat-card-header>
-
   <mat-card-content>
-    <mat-form-field>
-      <input matInput  placeholder="Usuario" name="usuario" required />
-    </mat-form-field>
-    <!--    [(ngModel)]="username" -->
-    <mat-form-field>
-      <!--
-      <input
-        matInput
-        placeholder="Password"
-        type="password"
-        name="password"
-        required
-      /> -->
-      <div class="mat-form-field-infix">
-          <input
-            class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored"
-            matInput
-            placeholder="Enter your password"
-            type="password"
-            id="mat-input-10"
-            aria-invalid="false"
-            aria-required="false"
-          /><span class="mat-form-field-label-wrapper"
-            ><!----><label
-              class="mat-form-field-label ng-tns-c21-19 ng-star-inserted"
-              id="mat-form-field-label-27"
-              for="mat-input-10"
-              aria-owns="mat-input-10"
-              ><!----><!----><span class="ng-tns-c21-19 ng-star-inserted"
-                >Enter your password</span
-              ><!----><!----></label
-            ></span
-          >
-        </div>
-    </mat-form-field>
-    <!-- [(ngModel)]="password" -->
-    <!--<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Ingrese su usuario</mat-label>
+        <input matInput placeholder="Usuario" name="usuario" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Ingrese su password</mat-label>
+        <input
+          matInput
+          placeholder="Password"
+          type="password"
+          name="password"
+          required
+        />
+      </mat-form-field>
+    </div>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary">Aceptar</button>
-    <!--(click)="login()"-->
   </mat-card-actions>
 </mat-card>
+
